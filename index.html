@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raddrizzamento Foto Rilievi</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    </head>
+<body>
+    <div class="container">
+        <h1>Raddrizzamento Foto Rilievi</h1>
+
+        <div class="upload-section">
+            <label for="inputImage" class="custom-file-upload">
+                Scegli una Foto
+            </label>
+            <input type="file" id="inputImage" accept="image/*">
+        </div>
+
+        <div class="image-area">
+            <p id="message">Carica una foto e clicca su 4 punti per raddrizzarla.</p>
+            <canvas id="originalCanvas"></canvas>
+            <div id="controls" style="display: none;">
+                <p>Punti selezionati: <span id="pointsCount">0</span>/4</p>
+                <button id="resetPointsBtn">Reset Punti</button>
+                <button id="straightenBtn">Raddrizza Foto</button>
+            </div>
+        </div>
+
+        <div id="outputSection" class="output-section" style="display: none;">
+            <h2>Foto Raddrizzata</h2>
+            <canvas id="straightenedCanvas"></canvas>
+            <button id="downloadBtn">Scarica Foto Raddrizzata</button>
+        </div>
+    </div>
+    
+    <script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Allinea in alto */
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding nel calcolo della larghezza/altezza */
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 900px; /* Limita la larghezza massima del container */
+    margin-top: 20px; /* Spazio dal bordo superiore */
+}
+
+h1, h2 {
+    color: #0056b3;
+    margin-bottom: 20px;
+}
+
+.upload-section {
+    margin-bottom: 20px;
+}
+
+/* Stile per il pulsante personalizzato di upload */
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-file-upload:hover {
+    background-color: #0056b3;
+}
+
+/* Nasconde l'input file predefinito */
+#inputImage {
+    display: none;
+}
+
+.image-area {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #e9e9e9;
+    min-height: 150px; /* Assicura che l'area sia visibile anche senza immagine */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#originalCanvas {
+    max-width: 100%; /* L'immagine si adatta all'area */
+    height: auto; /* Mantiene le proporzioni */
+    display: block; /* Rimuove spazi extra sotto il canvas */
+    margin: 0 auto; /* Centra il canvas */
+    border: 1px dashed #aaa; /* Bordo per distinguere il canvas */
+}
+
+#message {
+    margin-bottom: 15px;
+    font-style: italic;
+    color: #555;
+}
+
+#controls {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap; /* Permette ai pulsanti di andare a capo */
+    justify-content: center;
+    gap: 10px; /* Spazio tra i pulsanti */
+}
+
+#controls button {
+    padding: 8px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#controls button:hover {
+    background-color: #218838;
+}
+
+#controls button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.output-section {
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+#straightenedCanvas {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border: 1px solid #007bff; /* Bordo più marcato per il canvas raddrizzato */
+}
+
+#downloadBtn {
+    padding: 10px 20px;
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#downloadBtn:hover {
+    background-color: #138496;
+}
